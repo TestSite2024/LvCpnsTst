@@ -1,0 +1,472 @@
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  white-space:nowrap;
+}
+body {
+  height: 100vh;
+  background-color: #FFFFFF;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size:cover;
+  min-height: 100vh;
+  -webkit-text-size-adjust: none;
+   -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+        text-size-adjust: none;
+  /* Prevent pull-down-to-refresh gesture */
+   overscroll-behavior-y: contain; 
+
+  /* Prevent iOS rubber-band effect */
+  position: fixed;
+  width: 100%;
+
+  /* Prevent browser from handling touch events */
+  touch-action: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+.wheel-wrapper {
+  /* Hide UI during page load */
+  visibility: hidden;
+
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+/* @media only screen and (prefers-color-scheme: dark), (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+.tablemobile {
+    overflow-x: hidden;
+    display: block;
+}
+} */
+
+.pagetop h1 {
+display:flexbox;
+font-weight: 400;
+flex-direction: column;
+font-size: calc(3rem + 4vw);
+text-align: center;
+text-shadow: 2px 1px 2px  #000000;
+} 
+.pagetop h3 {
+font-family: "Roboto", serif;
+flex-direction: column;
+font-size:calc(1rem + 1vw);
+color: #000000 !important;
+text-align: center;
+font-weight: 400;
+white-space:normal;
+
+} 
+.pagetop h4 {
+  font-family: "Roboto", sans-serif;
+  display:flex;
+  font-weight: 400;
+  color: #000000;
+  flex-direction: column;
+  font-size: 1.5vh;
+  text-align: center;
+  white-space:normal;
+  } 
+  .tabletop h4 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: #000000;
+    flex-direction: column;
+    font-size:4vmin;
+    text-align: center;
+    }
+ 
+#reveal {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+#baby
+{
+  white-space: normal;
+}
+#tboy {
+  font-size: calc(2rem + 4vw);
+  white-space:normal;
+}
+#boy{
+  line-height: 5vh;
+  text-align: center;
+}
+#t1 {
+  width: 80%;
+  text-align: center;
+}
+
+#scratcher-box {
+  width:28em;
+  align-content: center;
+  height:28em;
+  /*background-color: #FFFFFF;*/
+  position:absolute;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  top: 65%;
+  left: 50%;
+}
+#baby{
+  font-weight: 600;
+}
+/* modal window styles */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Float cancel and delete buttons and add an equal width */
+.nosoundbtn, .withsoundbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add a color to the cancel button */
+.nosoundbtn {
+  background-color: #ccc;
+  color: black;
+}
+
+/* Add a color to the delete button */
+.withsoundbtn {
+  background-color: #45a14d;
+}
+
+/* Add padding and center-align text to the container */
+.container {
+  padding: 16px;
+  text-align: center;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #afafafee;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 55% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 70%; /* Could be more or less, depending on screen size */
+  word-break: break-word;
+}
+h2 {
+  color: #000000 !important;
+  font-weight: 100;
+  white-space: normal;
+}
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Modal Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#spinbtn, #spin {
+  border: none;
+  padding: 10px 40px;
+  color: #ffffff;
+  cursor: pointer;
+  background-image: linear-gradient(to left, #ff0000 0%, #ffb0b0 51%, #ff0000 100%);
+  background-size: 200% auto;
+  transition: 1s;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  display:inline-block;
+  font-size: 2vh;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  box-shadow: 0 0 30px rgba(8, 7, 16, 0.6);
+  
+}
+  
+.btn:hover {
+      background-position: right center; /* change the direction of the change here */
+}
+
+.dropbtn {
+padding: 10px ;
+color: #000000;
+cursor: pointer;
+background-color: #FFFFFF;
+transition: 0.5s;
+border-radius: 10px;
+border:#FFFFFF;
+text-align: center;
+text-decoration: none;
+text-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+display:block;
+font-family: "Roboto", serif;
+font-size: 2vh;
+backdrop-filter: blur(30px);
+-webkit-backdrop-filter: blur(30px);
+box-shadow: 0 0 30px rgba(8, 7, 16, 0.6);
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #7c7c7c;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0 0 30px rgba(8, 7, 16, 0.6);
+  z-index: 1;
+  right:auto;
+  width:100%;
+border-radius: 10px;
+text-align: center;
+text-decoration: none;
+text-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+font-size: 2vh;
+font-family: "Roboto", serif;
+backdrop-filter: blur(30px);
+-webkit-backdrop-filter: blur(30px);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+/* Styles for mobile phones */ 
+
+@media (min-width: 376px), (max-width:1024px){ 
+  .pagetop h4 {
+    font-size: calc(0.7rem + 1vw) ;
+  }
+  .pagetop h1 {
+    font-size: calc(3rem + 4vw);
+  }
+   #scratcher-box {
+    width: 24em;
+    height: 24em;
+    top:65%;
+   }  
+  
+} 
+@media (min-width: 768px) and (min-height: 930px){ 
+  
+  .pagetop h3 {
+    font-size: calc(1.5rem + 1.2vw);
+  }
+  .pagetop h1 {
+    font-size: calc(5rem + 4vw);
+  }
+
+  #boy{
+    line-height: 18vh !important;
+  }
+  #scratcher-box {
+    position:absolute;
+    width: 30em;
+    height: 30em; 
+    top: 65%;
+  }
+}
+@media (min-height: 635px) and (min-width: 1024px){ 
+  .pagetop h1 {
+    font-size: calc(3rem + 4vw);
+  }
+  .pagetop h3 {
+    font-size: calc(1.3rem + 0.5vh);
+  }
+  .pagetop h4 {
+    font-size: 2vh;
+  }
+  #boy{
+    line-height: 15vh !important;
+  }
+  #scratcher-box {
+    position:absolute;
+    width: 29em;
+    height: 29em; 
+    top: 67%;
+  }
+}
+@media (max-width: 375px), (max-height:667px) {
+  .pagetop h4 {
+    font-size: calc(0.7rem + 0.8vh) ;
+  }
+  .pagetop h1 {
+    font-size: calc(3rem + 1.8vh);
+  }
+  .pagetop h3 {
+    font-size: calc(1rem);
+  }
+  /* #mainbody {
+    position: inherit;
+      -webkit-transform-origin: top left;
+      -ms-transform-origin: top left;
+      -moz-transform-origin: top left;
+      -o-transform-origin: top left;
+      transform-origin: top left;
+  } */
+/*   #boy {
+    line-height: 6vh !important;
+  }
+  .images{
+    max-width: 80% !important;
+  } */
+  #scratcher-box {
+    position:absolute;
+    width: 20em;
+    height: 20em; 
+    top: 67%;
+  }
+  
+} 
+
+@media (max-width: 320px) { 
+   .pagetop h1 {
+    font-size: calc(2.2rem + 3vw);
+  }
+  .pagetop h3 {
+    font-size: calc(0.7rem + 0.5vw);
+  }
+  .pagetop h4 {
+    font-size: calc(0.7rem + 0.6vw) ;
+  }
+ #boy {
+    line-height: 12vh !important;
+  }
+  /* .images{
+    max-width: 80% !important;
+  } */
+  #scratcher-box {
+    position:absolute;
+    width: 17em;
+    height: 17em; 
+    top: 65%;
+  }
+
+   #H3 {
+    line-height: 15px;
+  } 
+  /* #t1 {
+    width: 300px;
+  } */
+}
+/* Change styles for cancel button and delete button on extra small screens */
+@media screen and (max-width: 360px) {
+  .nosoundbtn, .withsoundbtn {
+    font-size: 5vw; 
+    width: 100%;
+  }
+  h2{
+    font-size: 6vw;
+  }
+}
+
+#scratcher-box canvas {
+  cursor: grab;
+  }
+table { 
+  table-layout:fixed;
+  /**transform: translate(0%, 50%);
+  top: 75%;
+  left: 10%;*/
+}
+#scratcher1, #scratcher2, #scratcher3, #scratcher4, #scratcher5, #scratcher6, #scratcher7, #scratcher8, #scratcher9 {
+  width: 100%;
+  padding: 5px;
+  /* border: 1px;
+    border-color: #000000;
+    border-style: solid; */
+}
+
+#scratcher-bottom-margin {
+  display:block;
+  position: fixed;
+  text-align: right;
+  bottom: 1px;
+  right: 1px;
+  } 
+
+
+
+
