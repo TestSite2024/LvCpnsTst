@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Karantina&family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/> 
+<meta name="color-scheme" content="dark only">
+<title></title>
+
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous"></script>
+<!-- <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script> -->
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.8.0/dist/confetti.browser.min.js"></script>
+<!--
+<script src="https://cdn.jsdelivr.net/npm/tsparticles/tsparticles.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tsparticles/shape-heart@3.7.1/tsparticles.shape.heart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tsparticles/jquery"></script>-->
+<script src=https://code.createjs.com/1.0.0/soundjs.min.js></script>
+
+
+<!-- CSS and scripts -->
+
+<link href="inside.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="main_landscape.css" media="screen and (orientation: landscape) and (max-width: 1023px)">
+<script type="module" src="main.js"></script>
+<script type="module" src="inside.js"></script>
+
+</head>
+<!-- begin common pagetop -->
+<body>
+  <div onclick="void(0);">
+  <div id="id01" class="modal">
+    <form id="form" class="modal-content" action="javascript:void(0);">
+      <div class="container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close">×</span>
+        <h2>
+        <p id="title" style="font-weight:bold; white-space:normal"></p>
+        <p id="category" style="text-align: left; white-space: normal;"><u></u>     
+        <span id="coupon" style="display: inline; color:#000000; word-break:keep-all ;"></span></p>
+        </h2>
+        <h5 style="font-size: 1rem; color:white; white-space: normal;">Take a screenshot or share this with your partner</h5>
+        <div class="clearfix">
+        
+          <button type="button" class="nosoundbtn">OK</button>
+          <button type="button" class="withsoundbtn">SHARE</button>
+        </div>
+      </div>
+    </form>
+  </div>
+<div class="pagetop">  
+ <!-- .pagetop -->
+
+ <!-- <audio id="soundHandle" style="display:none;" src="audio/celebrate.mp3" type="audio/mpeg"></audio> -->
+
+ 
+<h1 id="title" style="font-family: 'Karantina'"> 
+  <div id="tboy" style="text-align:center;"></div>
+  <div id="t1" style= "margin-left: auto;margin-right: auto;">
+    <div id="boy" style="color:#ff9900 ;line-height: 13vh;">Inside the House </span>
+    </div>
+    <!-- <img src="images/back1.png" style="width: 100px;" ></img>-->
+    
+    <!-- <tr><td id="img" style="line-height: 1vh"><img class="images" src="images/back1.png" style=" width: 100%;" ></img></td></tr> -->
+  </div>
+</h1>
+<div id="reveal">
+<table style="width: 100%;">
+  <tr>
+  <td ><h3 id="H3">Spin to randomly find an activity in this category</td>
+</tr>
+<tr> <td align="center" style="padding-top:10px;padding-bottom: 10px;"><input type="button" onclick="history.back()" class="dropbtn" id="button" value="Back Home"></input></td>
+</tr>
+<tr> <td align="center"><input type="button" class="btn" id="spinbtn" value="Spin!"></input></td>
+</tr>
+<tr>
+  <td ><h3 id="H3" >NOTE: This demo version has limited capability. In demo, each time wheel spins to the same item. In the original product, the spin will be random.
+  </td>
+</tr>
+</table>
+<!-- <table style="width: 100%;">
+  <tr>
+  <td> 
+  <h4 id="H4">Click-drag (or touch-flick) to spin the wheel.</h4>
+  </td>
+  </tr>
+</table> -->
+<br>
+</div>
+</div>
+<div id="mainbody">
+<!-- end common pagetop -->
+
+<!-- Begin scratcher -->
+
+
+
+<p><noscript>(This page requires JavaScript to run correctly. Please enable JavaScript from your Browser's settings.)</noscript></p>
+<div id="scratcher-box">
+		<table id="table1" style=" margin-top: auto;margin-bottom: auto;margin-left: auto;margin-right: auto;">
+      
+      
+      <!-- <tr><td colspan="3"><div class="tabletop"><h4 id="scratcher3Pct" style="display:none">Find the gender</h4>
+      </div></td></tr> -->
+      
+      </table>
+ <div class="wheel-wrapper"></div>
+  
+</div> <!-- #canvas-box -->
+<!-- End scratcher -->
+<div id="scratcher-bottom-margin">
+  <a href="https://artisartprintables.etsy.com" style="text-decoration:none">
+  <p style="color:white; text-shadow: 1px 1px 10px #000000;">Copyright &#169 2024 ArtisArtPrintables Studio.</p>
+</div> </a>
+<div hidden id="lamebrowser">
+  <p><strong>Your browser doesn't support HTML canvas.</strong> Get a modern browser such
+  as <a href="http://www.google.com/chrome/">Chrome</a>,
+  <a href="http://firefox.com/">Firefox</a>, <a href="http://www.opera.com/">Opera</a>, or
+  <a href="http://windows.microsoft.com/en-us/internet-explorer/products/ie/home">IE9</a>.
+  And then, only then, will you be able to see this page. Sorry!</p>
+  </div>
+</html>
+</div>
+</body>
+<!-- end common pagebottom -->

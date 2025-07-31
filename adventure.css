@@ -1,0 +1,39 @@
+@import url("main.css");
+body {
+    background-image: url(images/background4.jpg);
+}
+@media (min-width: 376px), (max-width:1024px){ 
+  
+    .pagetop h1 {
+      font-size: calc(3rem + 4vw);
+    }
+  } 
+  @media (min-width: 768px) and (min-height: 930px){ 
+    
+    .pagetop h1 {
+      font-size: calc(4rem + 4vw);
+    }
+  
+    #boy{
+      line-height: 13vh !important;
+    }
+  }
+  @media (min-height: 635px) and (min-width: 1024px){ 
+    #boy{
+      line-height: 13vh !important;
+    }
+  }
+  @media (max-width: 375px), (max-height:667px) {
+
+    .pagetop h1 {
+      font-size: calc(3rem + 1.5vh);
+    }
+   
+  } 
+  
+  @media (max-width: 320px) { 
+     .pagetop h1 {
+      font-size: calc(2rem + 2vw);
+    }
+   
+  }
